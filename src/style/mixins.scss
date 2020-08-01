@@ -1,0 +1,33 @@
+@mixin position-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin add-button {
+    background-color: black;
+    font-size: 16px;
+    height: 32px;
+    width: 32px;
+    border-radius: 16px;
+    position: relative;
+
+    &:after,
+    &:before {
+        content: '';
+        display: block;
+        background-color: white;
+        @include position-center;
+    }
+
+    &:before {
+        width: 0.2em;
+        height: 1em;
+    }
+
+    &:after {
+        height: 0.2em;
+        width: 1em;
+    }
+}

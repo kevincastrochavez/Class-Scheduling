@@ -69,3 +69,20 @@
     transform: scale(0.8) translateX(-10px);
     transition: all .3s ease-in-out;
 }
+
+.course__add {
+    @include add-button;
+}
+
+.course__remove {
+    @include add-button;
+    transform: rotate(45deg);
+
+    // &:before {
+    //     transform: translate(-50%, -50%) rotate(45deg);
+    // }
+
+    // &:after {
+    //     transform: translate(-50%, -50%) rotate(45deg);
+    // }
+}
