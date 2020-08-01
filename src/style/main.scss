@@ -29,9 +29,12 @@ body {
 .library {
     flex-grow: 2;
     width: 62%;
+    max-width: 62%;
     padding: 6rem;
     z-index: 1;
     height: 100vw;
+    position: absolute;
+    left: 0;
 }
 
 
@@ -42,6 +45,8 @@ body {
     height: 100vw;
     text-align: center;
     padding: 12rem 6rem;
+    position: fixed;
+    right: 0;
 }
 
 .schedule__header {
