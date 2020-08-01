@@ -50,7 +50,6 @@ function mapDispatchToProps(dispatch) {
             dispatch(fetchCourses())
         }
     }
-
 }
 
 CourseLibrary = connect(mapStateToProps, mapDispatchToProps)(CourseLibrary);
