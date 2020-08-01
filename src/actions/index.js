@@ -1,4 +1,5 @@
 import { FETCH_COURSES } from './types';
+import { REMOVE_COURSE } from './types';
 
 export function fetchCourses() {
     return {
@@ -13,5 +14,12 @@ export function fetchCourses() {
                 "description": "This User Experience(UX) course examines how to develop a system for approaching application development and enhancing the experience for users."
             }
         ]
+    }
+}
+
+export function removeCourse(course) {
+    return {
+        type: REMOVE_COURSE,
+        payload: course
     }
 }
