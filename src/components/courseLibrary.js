@@ -6,6 +6,7 @@ import {
     removeCourse, 
     toggleDescription 
 } from '../actions';
+import AnimateHeight from 'react-animate-height';
 
 class CourseLibrary extends Component {
     constructor(props) {
@@ -33,11 +34,16 @@ class CourseLibrary extends Component {
                     <a className={`action ${course.enrolled ? 'show-content' : 'hide-content'}`} onClick={() => this.props.removeCourse(course)}> Remove Course</a>
                 </div>
 
-                <div className={`course__description ${course.open ? 'show-content' : 'hide-content'}`}>
-                    <h6 className="course__description-title">Course Description</h6>
+                <AnimateHeight
+                    duration={300}
+                    height={ course.open ? 'auto' : '0' }
+                >
+                    <div className="course__description">
+                        <h6 className="course__description-title">Course Description</h6>
 
-                    <p>{course.description}</p>
-                </div>
+                        <p>{course.description}</p>
+                    </div>
+                </AnimateHeight>
             </li>
         )
     }
