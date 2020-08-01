@@ -1,2 +1,3 @@
 export const FETCH_COURSES = 'fetchCourses';
-export const REMOVE_COURSE = 'remove_course';
+export const REMOVE_COURSE = 'removeCourse';
+export const ADD_COURSE = 'addCourse';

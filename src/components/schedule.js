@@ -41,7 +41,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         removeCourse: (course) => {
-            dispatch(removeCourse())
+            dispatch(removeCourse(course))
         }
     }
 
