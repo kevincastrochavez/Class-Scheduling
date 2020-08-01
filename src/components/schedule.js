@@ -15,7 +15,7 @@ class Schedule extends Component {
 
     renderCourse(course) {
         return (
-            <div key={this.props.courses.indexOf(course)} className={`slot ${course.enrolled ? 'slot__course' : 'slot__empty'}`}>
+            <div key={this.state.enrolled.indexOf(course)} className={`slot ${course.enrolled ? 'slot__course' : 'slot__empty'}`}>
                 <div>
                     {course.enrolled ? course.title : 'Empty Slot'}
                 </div>
@@ -39,6 +39,10 @@ class Schedule extends Component {
                 newEnrolled.push(course)
             }
         })
+
+        for (var emptySlot = newEnrolled.length; emptySlot < 5; emptySlot++) {
+            newEnrolled.push({ enrolled: false })
+        }
 
         this.setState({
             enrolled: newEnrolled
