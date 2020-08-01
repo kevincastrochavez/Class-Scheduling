@@ -35,7 +35,13 @@ class Schedule extends Component {
 }
 
 function mapStateToProps(state) {
-    return { courses: state.courses };
+    var enrolledCourses = [];
+    state.courses.map((course) => {
+        if (course.enrolled) {
+            enrolledCourses.push(course)
+        }
+    })
+    return { courses: enrolledCourses };
 }
 
 function mapDispatchToProps(dispatch) {
