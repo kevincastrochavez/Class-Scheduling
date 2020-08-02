@@ -20,7 +20,7 @@ class Schedule extends Component {
                     {course.enrolled ? course.title : 'Empty Slot'}
                 </div>
 
-                <a className={`action slot__remove `} onClick={() => this.props.removeCourse(course)}> Remove Course</a>
+                <a className={`action slot__remove `} onClick={() => this.props.removeCourse(course)}></a>
             </div>
         )
     }

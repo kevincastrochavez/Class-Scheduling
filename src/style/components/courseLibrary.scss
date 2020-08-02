@@ -72,6 +72,7 @@
 
 .course__add {
     @include add-button;
+    left: 8px;
 }
 
 .course__remove {
@@ -85,4 +86,13 @@
     &:after {
         transform: translate(-50%, -50%) rotate(45deg);
     }
+}
+
+.slot__remove {
+    @include add-button;
+    display: inline-block;
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
 }
