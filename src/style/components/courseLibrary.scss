@@ -75,14 +75,14 @@
 }
 
 .course__remove {
-    @include add-button;
-    transform: rotate(45deg);
+    // @include add-button;
+    // transform: rotate(45deg);
 
-    // &:before {
-    //     transform: translate(-50%, -50%) rotate(45deg);
-    // }
+    &:before {
+        transform: translate(-50%, -50%) rotate(-135deg);
+    }
 
-    // &:after {
-    //     transform: translate(-50%, -50%) rotate(45deg);
-    // }
+    &:after {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
 }

@@ -15,10 +15,11 @@
 
     &:after,
     &:before {
+        @include position-center;
         content: '';
         display: block;
         background-color: white;
-        @include position-center;
+        transition: all .3s ease-in-out;
     }
 
     &:before {
